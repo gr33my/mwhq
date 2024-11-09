@@ -48,7 +48,7 @@ router.get('/:id', async (req, res) => {
  * @swagger
  * /api:
  *   post:
- *     summary: Create a new example
+ *     summary: Create a new page
  *     requestBody:
  *       required: true
  *       content:
@@ -58,16 +58,19 @@ router.get('/:id', async (req, res) => {
  *             properties:
  *               name:
  *                 type: string
+ *               description:
+ *                 type: string
  *     responses:
  *       201:
- *         description: The created example object
+ *         description: The created page object
  *       400:
  *         description: Bad request
  */
 router.post('/', async (req, res) => {
     try {
-        const savedExample = await MWHQModel.create(req.body);
-        res.status(201).json(savedExample);
+        const { name, description } = req.body;
+        const savedPage = await MWHQModel.create({ name, description });
+        res.status(201).json(savedPage);
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
@@ -133,6 +136,16 @@ router.delete('/:id', async (req, res) => {
         res.json(deletedExample);
     } catch (error) {
         res.status(500).json({ message: error.message });
+    }
+});
+
+// Admin route to get data
+router.get('/admin/data', async (req, res) => {
+    try {
+        const data = await MWHQModel.findAll();
+        res.json(data);
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to fetch data' });
     }
 });
 
