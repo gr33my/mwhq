@@ -4,7 +4,7 @@ This project is a web application built using React.js, Tailwind CSS, and a Mari
 
 ## Project Structure
 
-```
+
 mechwarriorhq
 ├── public
 │   ├── index.html         # Main HTML file
@@ -31,35 +31,26 @@ mechwarriorhq
 ├── postcss.config.js      # PostCSS configuration
 ├── .env                   # Environment variables
 └── README.md              # Project documentation
-```
 
 ## Setup Instructions
 
 1. **Clone the repository:**
-   ```
    git clone <repository-url>
    cd my-react-web-project
-   ```
 
 2. **Install dependencies:**
-   ```
    npm install
-   ```
 
 3. **Set up the database:**
    - Create a MariaDB database and update the `.env` file with the connection details.
 
 4. **Run the server:**
-   ```
    cd server
    node server.js
-   ```
 
 5. **Run the React application:**
-   ```
    cd src
    npm start
-   ```
 
 ## Usage
 
