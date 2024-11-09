@@ -4,7 +4,6 @@ This project is a web application built using React.js, Tailwind CSS, and a Mari
 
 ## Project Structure
 
-
 mechwarriorhq
 ├── public
 │   ├── index.html         # Main HTML file
@@ -35,8 +34,8 @@ mechwarriorhq
 ## Setup Instructions
 
 1. **Clone the repository:**
-   git clone <repository-url>
-   cd my-react-web-project
+   git clone https://github.com/gr33my/mwhq.git mechwarriorhq
+   cd mechwarriorhq
 
 2. **Install dependencies:**
    npm install
